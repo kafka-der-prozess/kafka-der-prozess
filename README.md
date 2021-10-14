@@ -2,11 +2,12 @@
 
 "Kafka der Prozess" (KdP for short) will be a business activity monitoring (BAM) tool. 
 This means that it tracks activities of processes, which have been uploaded into the main engine of KdP.
-Its main advantages over other BAM tools is a combination of:
+
+The main reasons why you should implement KdP and maybe not use other BAM tools is a combination of:
 * it is open source and free for everyone
 * it is rather light-weight and therefore easy to comprehend (it avoids complex things like CEP ("complex event processing"))
-* it should be able to keep up with firehoses of Kafka topics (i.e. it is designed to scale linearly by using scalable libraries and tools, only)
-* it has open interfaces to store and process events from easy to implement databases and event sources
+* it should be able to keep up with firehoses of Kafka topics and other heavy workloads (i.e. it is designed to scale linearly by using scalable libraries and tools, only)
+* it has very simple open interfaces to store and process events. Databases and event sources already available in your environment can be integrated easily.
 
 ## Architecture
 
