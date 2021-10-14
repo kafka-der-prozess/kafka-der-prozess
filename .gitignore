@@ -1,8 +1,11 @@
 # Compiled class file
 *.class
 target/
+
+# IDE specific files
 .idea/
 .DS_Store
+*.iml
 
 # Log file
 *.log
