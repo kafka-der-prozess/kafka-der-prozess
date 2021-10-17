@@ -2,21 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kafka-der-prozess-storage</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>kafka-der-prozess-storage-jpa</artifactId>
 
     <parent>
-        <artifactId>kafka-der-prozess</artifactId>
+        <artifactId>kafka-der-prozess-storage</artifactId>
         <groupId>com.kafka-der-prozess</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <modules>
-        <!-- <module>infinispan-storage</module> -->
-        <module>jpa-storage</module>
-        <!-- <module>mongo-storage</module> -->
-        <!-- <module>cassandra-storage</module> -->
-    </modules>
 
     <dependencies>
         <dependency>
@@ -24,5 +16,17 @@
             <artifactId>kafka-der-prozess-engine</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 </project>
