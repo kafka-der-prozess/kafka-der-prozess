@@ -3,14 +3,16 @@ package com.pettersystems.prozess.processengine.runtime;
 import com.pettersystems.prozess.processengine.model.definition.Event;
 import com.pettersystems.prozess.processengine.model.definition.ProcessDefinition;
 import com.pettersystems.prozess.processengine.model.definition.Relation;
-import com.pettersystems.prozess.processengine.model.instance.ProcessInstance;
 import io.vavr.Tuple;
 import io.vavr.Tuple2;
 import io.vavr.control.Option;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 @Component
 @Slf4j
@@ -27,9 +29,5 @@ public class EventMapper {
 
     public Set<Tuple2<ProcessDefinition, Relation>> getProcessDefinitionsForEvent(final Event event) {
         return Option.of(events.get(event)).getOrElse(new HashSet<>());
-    }
-
-    public ProcessInstance identifyProcessInstance() {
-
     }
 }
